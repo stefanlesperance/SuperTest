@@ -6,17 +6,27 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+   
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
   </head>
 
   <body>
     <!-- ##The yield piece below is effectively like a Fragment of sorts. Whatever page I visit it goes to and pulls up, swapping it in and out. This means the application.html.erb can be used to simplif things, ensure consistent things  appear acrosss all pages without requiring considerable  duplicate code. -->
-
-    <%= link_to "Welcome", "/" %>
-    <%= link_to "About", "/about" %>
-    <%= yield %>
-
+    <div class ="container"> 
+      <ul class = "nav nav-pills" >
+      <li>
+         <%= link_to "Welcome", "/", class: "nav-link active" %>
+      </li>
+       <li>
+          <%= link_to "About", "/about", class: "nav-link" %>    
+      </li>
+      </ul>
+      <%= yield %>
+    </div>
   </body>
 
 </html>
