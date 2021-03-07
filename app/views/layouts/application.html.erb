@@ -16,17 +16,25 @@
 
   <body>
     <!-- ##The yield piece below is effectively like a Fragment of sorts. Whatever page I visit it goes to and pulls up, swapping it in and out. This means the application.html.erb can be used to simplif things, ensure consistent things  appear acrosss all pages without requiring considerable  duplicate code. -->
+
+    
     <div class ="container"> 
-      <ul class = "nav nav-pills" >
-      <li>
-         <%= link_to "Welcome", "/", class: "nav-link active" %>
-      </li>
-       <li>
-          <%= link_to "About", "/about", class: "nav-link" %>    
-      </li>
-      </ul>
-      <%= yield %>
-    </div>
+      <div class="page-header">
+        <h1>
+          <%= link_to "Crumbler", "/" %>
+          <small>// Home Baked Goodness</small>
+        </h1>
+      </div>
+        <ul class = "nav nav-pills justify-content-end" >
+        <li>
+           <%= link_to "Welcome", "/", class: "nav-link active" %>
+        </li>
+         <li>
+            <%= link_to "About", "/about", class: "nav-link" %>    
+        </li>
+        </ul>
+        <%= yield %>
+      </div>
   </body>
 
 </html>
