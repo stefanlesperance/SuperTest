@@ -20,21 +20,48 @@
     
     <div class ="container"> 
       <div class="page-header">
-        <h1>
+        <nav class="navbar navbar-light navbar-expand-md bg-faded justify-content-center">
+      <span class ="text-nowrap">
+        <h5>
           <%= link_to "Crumbler", "/" %>
-          <small>// Home Baked Goodness</small>
-        </h1>
-      </div>
-        <ul class = "nav nav-pills justify-content-end" >
-        <li>
-           <%= link_to "Welcome", "/", class: "nav-link active" %>
-        </li>
-         <li>
-            <%= link_to "About", "/about", class: "nav-link" %>    
-        </li>
+              <small class = "text-muted">// home goodness</small>
+        </h5>
+      </span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+        <ul class="navbar-nav w-100 justify-content-center">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="//codeply.com">Codeply</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
         </ul>
-        <%= yield %>
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <%= link_to "Welcome", "/", class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+                <%= link_to "About", "/about", class: "nav-link" %>  
+            </li>
+            <li class="nav-item">
+                <%= link_to "Test", "/test", class: "nav-link" %>  
+            </li>
+        </ul>
+    </div>
+</nav>
       </div>
+        <div class = "row">
+        <div class="col-md-6 offset-md-3">
+          <%= yield %>
+        </div>
+      </div>
+
   </body>
 
 </html>
