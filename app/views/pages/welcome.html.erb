@@ -1,5 +1,10 @@
-<h1>Pages#welcome</h1>
 
 
-<p>Anger Management is an excellent film that I should watch more of.</p>
+<% @posts.each do |post| %>
+	<%= render 'posts/post', post: post %>
+	<br>
+	<br>
+	<br>
+	<br>
 
+<% end %>

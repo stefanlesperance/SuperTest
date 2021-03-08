@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   end
 
   def welcome
+  	@posts = Post.all
   end
 
   def test
