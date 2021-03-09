@@ -1,12 +1,17 @@
+<% if notice.present? %>
+	<p class = "alert alert-info"><%= notice %></p>
+<% end %>
+
 <p>
-  <h2>
-  <%= link_to post.title, post %>
-  </h2>
+	<h2>
+		<%= post.title%>
+	</h2>
 </p>
 
 <p>
 	<% if post.kind == 'image'  %>
-		<img src = "https://upload.wikimedia.org/wikipedia/commons/6/60/BiscuitsAmerican%26British.png"/>
+	<%= image_tag post.content, style: 'width: 100%' %>
+		
 	<% else %>
  	    <%= simple_format post.content %>
  	<% end %>
